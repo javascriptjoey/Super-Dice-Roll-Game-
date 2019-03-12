@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Super_Dice_Roll_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="H47-4D-zyO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H47-4D-zyO" secondAttribute="height" multiplier="375:667" id="kaN-Z2-j8p"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRQ-VE-zUH">
+                                <rect key="frame" x="110" y="462" width="155" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VRQ-VE-zUH" secondAttribute="height" multiplier="155:77" id="9Iq-K6-OGj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="39"/>
+                                <color key="textColor" red="1" green="0.20492110699999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Super-Dice-logo" translatesAutoresizingMaskIntoConstraints="NO" id="s7T-Ao-Rf2">
+                                <rect key="frame" x="58" y="96" width="259" height="254"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s7T-Ao-Rf2" secondAttribute="height" multiplier="259:254" id="MTU-2J-FnH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H47-4D-zyO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0OT-GP-JMI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VRQ-VE-zUH" secondAttribute="bottom" constant="128" id="5aV-SC-BYM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s7T-Ao-Rf2" secondAttribute="bottom" constant="317" id="5mi-9i-gtF"/>
+                            <constraint firstItem="s7T-Ao-Rf2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="9Vl-aQ-L6g"/>
+                            <constraint firstItem="VRQ-VE-zUH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="F0X-oR-ebO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s7T-Ao-Rf2" secondAttribute="trailing" constant="58" id="YMf-qN-EHe"/>
+                            <constraint firstItem="H47-4D-zyO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cDf-W9-ekY"/>
+                            <constraint firstAttribute="trailing" secondItem="H47-4D-zyO" secondAttribute="trailing" id="dsB-2K-VJ0"/>
+                            <constraint firstItem="s7T-Ao-Rf2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="kPS-dm-BS7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VRQ-VE-zUH" secondAttribute="trailing" constant="110" id="la4-YA-hgK"/>
+                            <constraint firstAttribute="bottom" secondItem="H47-4D-zyO" secondAttribute="bottom" id="obA-Zh-iij"/>
+                            <constraint firstItem="VRQ-VE-zUH" firstAttribute="top" secondItem="s7T-Ao-Rf2" secondAttribute="bottom" constant="112" id="rpP-ql-Ix5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingLabel" destination="VRQ-VE-zUH" id="SfN-yT-X7g"/>
+                        <outlet property="logoImageView" destination="s7T-Ao-Rf2" id="LJg-l9-MQa"/>
+                        <segue destination="qGz-EP-zF7" kind="show" identifier="toMainGameSeg" id="Pra-cv-XMw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Main Game Background View Controller-->
+        <scene sceneID="ZZ3-0z-mWo">
+            <objects>
+                <viewController modalTransitionStyle="partialCurl" id="qGz-EP-zF7" customClass="MainGameBackgroundViewController" customModule="Super_Dice_Roll_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RzX-pk-Qtg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main-game-background" translatesAutoresizingMaskIntoConstraints="NO" id="dqK-nC-Cvq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Segue2-main-image" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-YV-sgn">
+                                <rect key="frame" x="38" y="76" width="299" height="377"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeelingLucky" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Y-Dw-uZ7">
+                                <rect key="frame" x="56" y="108" width="223" height="210"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instructions1" translatesAutoresizingMaskIntoConstraints="NO" id="TAU-nw-SOY">
+                                <rect key="frame" x="56" y="109" width="223" height="210"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rules1" translatesAutoresizingMaskIntoConstraints="NO" id="lyk-ER-TsN">
+                                <rect key="frame" x="57" y="109" width="223" height="210"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dqK-nC-Cvq" secondAttribute="bottom" id="2kx-U3-ZHH"/>
+                            <constraint firstItem="qOP-sc-x5S" firstAttribute="trailing" secondItem="Y5Y-Dw-uZ7" secondAttribute="trailing" constant="96" id="4rt-zn-d3k"/>
+                            <constraint firstItem="qOP-sc-x5S" firstAttribute="bottom" secondItem="lyk-ER-TsN" secondAttribute="bottom" constant="348" id="9me-d7-tFJ"/>
+                            <constraint firstItem="dqK-nC-Cvq" firstAttribute="top" secondItem="RzX-pk-Qtg" secondAttribute="top" id="DFO-21-LsP"/>
+                            <constraint firstItem="qOP-sc-x5S" firstAttribute="trailing" secondItem="TAU-nw-SOY" secondAttribute="trailing" constant="96" id="GZ3-rJ-bDy"/>
+                            <constraint firstItem="qOP-sc-x5S" firstAttribute="bottom" secondItem="f1E-YV-sgn" secondAttribute="bottom" constant="214" id="IYO-Wc-tyP"/>
+                            <constraint firstItem="lyk-ER-TsN" firstAttribute="leading" secondItem="qOP-sc-x5S" secondAttribute="leading" constant="57" id="KOg-HJ-obU"/>
+                            <constraint firstItem="Y5Y-Dw-uZ7" firstAttribute="leading" secondItem="qOP-sc-x5S" secondAttribute="leading" constant="56" id="Nbt-rx-6bT"/>
+                            <constraint firstItem="dqK-nC-Cvq" firstAttribute="leading" secondItem="RzX-pk-Qtg" secondAttribute="leading" id="R7c-Ao-6Ff"/>
+                            <constraint firstItem="qOP-sc-x5S" firstAttribute="bottom" secondItem="Y5Y-Dw-uZ7" secondAttribute="bottom" constant="349" id="R7k-df-ipq"/>
+                            <constraint firstItem="f1E-YV-sgn" firstAttribute="leading" secondItem="qOP-sc-x5S" secondAttribute="leading" constant="38" id="RyJ-UN-b6v"/>
+                            <constraint firstAttribute="trailing" secondItem="dqK-nC-Cvq" secondAttribute="trailing" id="Vts-IT-GtA"/>
+                            <constraint firstItem="lyk-ER-TsN" firstAttribute="top" secondItem="qOP-sc-x5S" secondAttribute="top" constant="89" id="XSm-cd-RMT"/>
+                            <constraint firstItem="qOP-sc-x5S" firstAttribute="bottom" secondItem="TAU-nw-SOY" secondAttribute="bottom" constant="348" id="Xnc-GA-7CA"/>
+                            <constraint firstItem="f1E-YV-sgn" firstAttribute="top" secondItem="qOP-sc-x5S" secondAttribute="top" constant="56" id="b4V-V8-Sc7"/>
+                            <constraint firstItem="qOP-sc-x5S" firstAttribute="trailing" secondItem="f1E-YV-sgn" secondAttribute="trailing" constant="38" id="cIW-08-BQh"/>
+                            <constraint firstItem="Y5Y-Dw-uZ7" firstAttribute="top" secondItem="qOP-sc-x5S" secondAttribute="top" constant="88" id="kMK-CU-csk"/>
+                            <constraint firstItem="qOP-sc-x5S" firstAttribute="trailing" secondItem="lyk-ER-TsN" secondAttribute="trailing" constant="95" id="pUR-hh-hgf"/>
+                            <constraint firstItem="TAU-nw-SOY" firstAttribute="top" secondItem="qOP-sc-x5S" secondAttribute="top" constant="89" id="tfQ-g1-KcH"/>
+                            <constraint firstItem="TAU-nw-SOY" firstAttribute="leading" secondItem="qOP-sc-x5S" secondAttribute="leading" constant="56" id="zGN-42-jDA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qOP-sc-x5S"/>
+                    </view>
+                    <connections>
+                        <outlet property="feelingLuckyText" destination="Y5Y-Dw-uZ7" id="FNi-Lm-fk6"/>
+                        <outlet property="instructionsText" destination="TAU-nw-SOY" id="JQ2-uS-wRd"/>
+                        <outlet property="myMainImage" destination="f1E-YV-sgn" id="bOa-fc-I3Q"/>
+                        <outlet property="rulesText" destination="lyk-ER-TsN" id="2XJ-r3-zE3"/>
+                        <segue destination="YfV-42-KBK" kind="show" identifier="toDiceGameSeg" id="pbi-mh-1zK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPE-wE-04t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166" y="133"/>
+        </scene>
+        <!--Main Dice Screen-->
+        <scene sceneID="Nj7-uR-z65">
+            <objects>
+                <viewController title="Main Dice Screen" modalTransitionStyle="crossDissolve" id="YfV-42-KBK" customClass="MainDiceGameViewController" customModule="Super_Dice_Roll_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E6Z-o0-waa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main-game-background" translatesAutoresizingMaskIntoConstraints="NO" id="WTN-Yd-Z9t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-three" translatesAutoresizingMaskIntoConstraints="NO" id="ccT-ZO-5UD">
+                                <rect key="frame" x="41" y="253" width="129" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-four" translatesAutoresizingMaskIntoConstraints="NO" id="uJb-K4-0PZ">
+                                <rect key="frame" x="211" y="253" width="129" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cic-jA-5aT">
+                                <rect key="frame" x="140" y="475" width="95" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" image="yellow-btn1"/>
+                                <connections>
+                                    <action selector="myButton:" destination="YfV-42-KBK" eventType="touchUpInside" id="1I8-ug-NXW"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textbox" translatesAutoresizingMaskIntoConstraints="NO" id="5uE-GR-VsL">
+                                <rect key="frame" x="54" y="42" width="266" height="165"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Better Luck Next Time " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bxc-3U-cH4">
+                                <rect key="frame" x="86" y="65" width="202" height="75"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ccT-ZO-5UD" firstAttribute="top" secondItem="Njz-nG-HAz" secondAttribute="top" constant="233" id="5MN-s1-Kf9"/>
+                            <constraint firstItem="Njz-nG-HAz" firstAttribute="bottom" secondItem="cic-jA-5aT" secondAttribute="bottom" constant="94" id="9Zb-pE-4cR"/>
+                            <constraint firstItem="ccT-ZO-5UD" firstAttribute="leading" secondItem="Njz-nG-HAz" secondAttribute="leading" constant="41" id="BnF-12-ABZ"/>
+                            <constraint firstItem="Njz-nG-HAz" firstAttribute="trailing" secondItem="5uE-GR-VsL" secondAttribute="trailing" constant="55" id="EEG-XS-vFW"/>
+                            <constraint firstItem="uJb-K4-0PZ" firstAttribute="leading" secondItem="ccT-ZO-5UD" secondAttribute="trailing" constant="41" id="IaS-SA-63I"/>
+                            <constraint firstItem="Njz-nG-HAz" firstAttribute="trailing" secondItem="cic-jA-5aT" secondAttribute="trailing" constant="140" id="OzA-ak-Mi7"/>
+                            <constraint firstItem="Njz-nG-HAz" firstAttribute="trailing" secondItem="ccT-ZO-5UD" secondAttribute="trailing" constant="205" id="PbW-9l-xNv"/>
+                            <constraint firstItem="Njz-nG-HAz" firstAttribute="trailing" secondItem="uJb-K4-0PZ" secondAttribute="trailing" constant="35" id="TWb-IQ-9kk"/>
+                            <constraint firstItem="5uE-GR-VsL" firstAttribute="leading" secondItem="Njz-nG-HAz" secondAttribute="leading" constant="54" id="UeH-GS-FVV"/>
+                            <constraint firstItem="Njz-nG-HAz" firstAttribute="bottom" secondItem="ccT-ZO-5UD" secondAttribute="bottom" constant="286" id="WcB-2S-qaI"/>
+                            <constraint firstItem="ccT-ZO-5UD" firstAttribute="top" secondItem="Bxc-3U-cH4" secondAttribute="bottom" constant="113" id="YeE-gO-40s"/>
+                            <constraint firstItem="ccT-ZO-5UD" firstAttribute="top" secondItem="5uE-GR-VsL" secondAttribute="bottom" constant="46" id="bmO-uP-blu"/>
+                            <constraint firstItem="Bxc-3U-cH4" firstAttribute="leading" secondItem="Njz-nG-HAz" secondAttribute="leading" constant="86" id="bzg-uM-1mM"/>
+                            <constraint firstItem="Njz-nG-HAz" firstAttribute="trailing" secondItem="Bxc-3U-cH4" secondAttribute="trailing" constant="87" id="e2B-c7-x1M"/>
+                            <constraint firstItem="WTN-Yd-Z9t" firstAttribute="top" secondItem="E6Z-o0-waa" secondAttribute="top" id="fIP-DG-lJg"/>
+                            <constraint firstItem="Bxc-3U-cH4" firstAttribute="top" secondItem="Njz-nG-HAz" secondAttribute="top" constant="45" id="gZt-Rv-YYz"/>
+                            <constraint firstItem="Njz-nG-HAz" firstAttribute="bottom" secondItem="uJb-K4-0PZ" secondAttribute="bottom" constant="286" id="hth-9o-hQW"/>
+                            <constraint firstAttribute="bottom" secondItem="WTN-Yd-Z9t" secondAttribute="bottom" id="j6M-oi-CWq"/>
+                            <constraint firstItem="uJb-K4-0PZ" firstAttribute="top" secondItem="Njz-nG-HAz" secondAttribute="top" constant="233" id="m9K-Qb-ZFw"/>
+                            <constraint firstItem="WTN-Yd-Z9t" firstAttribute="leading" secondItem="E6Z-o0-waa" secondAttribute="leading" id="mYT-IT-jKv"/>
+                            <constraint firstItem="cic-jA-5aT" firstAttribute="top" secondItem="ccT-ZO-5UD" secondAttribute="bottom" constant="94" id="o2A-zG-D4i"/>
+                            <constraint firstItem="cic-jA-5aT" firstAttribute="leading" secondItem="Njz-nG-HAz" secondAttribute="leading" constant="140" id="qRV-JH-kas"/>
+                            <constraint firstItem="5uE-GR-VsL" firstAttribute="top" secondItem="Njz-nG-HAz" secondAttribute="top" constant="22" id="ym6-4b-Q3T"/>
+                            <constraint firstAttribute="trailing" secondItem="WTN-Yd-Z9t" secondAttribute="trailing" id="z4f-LQ-9E6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Njz-nG-HAz"/>
+                    </view>
+                    <connections>
+                        <outlet property="d1" destination="ccT-ZO-5UD" id="0M4-ES-PRY"/>
+                        <outlet property="d2" destination="uJb-K4-0PZ" id="v6u-7Z-c2S"/>
+                        <outlet property="textBoxBackground" destination="5uE-GR-VsL" id="cc5-BT-yr4"/>
+                        <outlet property="textBoxTextForground" destination="Bxc-3U-cH4" id="z3z-1j-9dF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBf-lG-8LP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background-Gradient" width="1125" height="2436"/>
+        <image name="FeelingLucky" width="482" height="439"/>
+        <image name="Instructions1" width="476" height="444"/>
+        <image name="Main-game-background" width="1125" height="2436"/>
+        <image name="Segue2-main-image" width="915.1199951171875" height="1299.1199951171875"/>
+        <image name="Super-Dice-logo" width="1125" height="882"/>
+        <image name="dice-four" width="227" height="228"/>
+        <image name="dice-three" width="227" height="228"/>
+        <image name="rules1" width="482" height="439"/>
+        <image name="textbox" width="811.20001220703125" height="557.280029296875"/>
+        <image name="yellow-btn1" width="248.16000366210938" height="255.60000610351562"/>
+    </resources>
+</document>
